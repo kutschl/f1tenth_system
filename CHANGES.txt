@@ -1,0 +1,6 @@
+*f1tenth_stack/launch/bringup_launch.py*
+comment out urg_node
+
+*config/vesc.yaml*
+servo_min: 0.10
+servo_max: 0.90
