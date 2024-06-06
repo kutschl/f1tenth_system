@@ -1,9 +1,22 @@
 # f1tenth_system
 
-Drivers onboard f1tenth race cars. This branch is under development for migration to ROS2. See the [documentation of F1TENTH](https://f1tenth.readthedocs.io/en/foxy_test/getting_started/firmware/index.html) on how to get started.
+Drivers onboard f1tenth race cars. This branch is under development for ROS2. See the [documentation of F1TENTH](https://f1tenth.readthedocs.io/en/foxy_test/getting_started/firmware/index.html) on how to get started.
 
 ## Deadman's switch
-On Logitech F-710 joysticks, the LB button is the deadman's switch for teleop, and the RB button is the deadman's switch for navigation. You can also remap buttons. See how on the readthedocs documentation.
+On PS4 Dualshock, the L1 button is the deadman's switch for teleop, and the R1 button is the deadman's switch for navigation. You can also remap buttons. See how on the readthedocs documentation.
+
+## Launch
+For starting the f1tenth stack, use the bringup launch.
+```
+ros2 launch f1tenth_stack bringup_launch.py
+```
+
+## Dualshock PS4
+For connecting to the controllers, use the following MAC adresses:
+```
+84:17:66:80:91:6A    # black dualshock 'Elfi'
+1C:A0:B8:99:1E:68    # gray dualshock 'University'
+```
 
 ## Topics
 
@@ -24,7 +37,6 @@ On Logitech F-710 joysticks, the LB button is the deadman's switch for teleop, a
 4. teleop_tools  [https://index.ros.org/p/teleop_tools/#foxy](https://index.ros.org/p/teleop_tools/#foxy). This is the package for teleop with joysticks in ROS 2.
 5. vesc [GitHub - f1tenth/vesc at ros2](https://github.com/f1tenth/vesc/tree/ros2). This is the driver for VESCs in ROS 2.
 6. ackermann_mux [GitHub - f1tenth/ackermann_mux: Twist multiplexer](https://github.com/f1tenth/ackermann_mux). This is a package for multiplexing ackermann messages in ROS 2.
-<!-- 7. rosbridge_suite [https://index.ros.org/p/rosbridge_suite/#foxy-overview](https://index.ros.org/p/rosbridge_suite/#foxy-overview) This is a package that allows for websocket connection in ROS 2. -->
 
 ## Package in this repo
 
